@@ -7,5 +7,6 @@ article.docx: article.md bibliography.bib \
 	    --lua-filter=filters/extract-cito.lua \
 	    --citeproc \
 	    --lua-filter=filters/insert-cito-in-ref.lua \
+	    --csl=journal-of-cheminformatics.csl \
 	    --output=$@ \
 	    $<
