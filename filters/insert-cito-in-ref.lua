@@ -1,3 +1,8 @@
+-- Copyright © 2021 Albert Krewinkel
+--
+-- This library is free software; you can redistribute it and/or modify it
+-- under the terms of the MIT license. See LICENSE for details.
+
 local List = require 'pandoc.List'
 local utils = require 'pandoc.utils'
 local citation_properties
