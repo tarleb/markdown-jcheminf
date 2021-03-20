@@ -83,6 +83,13 @@ syntax.
 
 # Discussion
 
+In this section we examine the growth rate of the mean of $Z_0$, $Z_1$ and $Z_2$.
+And we can have LaTeX equations:
+
+$$
+x+1 = 2 
+$$
+
 # Conclusions
 
 # List of abbreviations
