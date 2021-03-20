@@ -68,11 +68,18 @@ by including an *\@* followed by the BibTeX key, for example like
 *\@Upper_writers_1974* for Ref. @Upper_writers_1974.
 
 Now, the *Journal of Cheminformatics* support citation typing ontology annotations
-using the CiTO @uses_method_in:Willighagen_2020.
+using the CiTO @uses_method_in:Willighagen_2020. Adding an annoted citation
+is done by prepending the BibTeX key with the intention, e.g.
+`\@agrees_with:Guha_Willighagen_2017` or `\@uses_method_in:Willighagen_2020`.
 
 
 # Results
 
+Figures are easy to add in Markdown, and can be done with the `![](images/cito_in_Word.png)`
+syntax.
+
+![](images/cito_in_Word.png)
+**Figure 1**: Reference list as converted into Word, including CiTO annotation.
 
 # Discussion
 
@@ -80,12 +87,6 @@ using the CiTO @uses_method_in:Willighagen_2020.
 
 # List of abbreviations
 
-
-
-### CiTO annotation
-
-The Journal of Cheminformatics welcomes authors to participate in our pilot using
-the Citation Typing Ontology (http://purl.org/spar/cito). For more information, please see here. 
 
 #### Availability of data and materials
 Text for this section.
