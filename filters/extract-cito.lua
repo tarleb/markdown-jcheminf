@@ -122,7 +122,7 @@ local function split_cito_from_id (citation_id)
     return properties_by_alias[prop_alias], split_citation_id
   end
 
-  return default_cito_property, citation_id
+  return nil, citation_id
 end
 
 --- CiTO properties by citation.
