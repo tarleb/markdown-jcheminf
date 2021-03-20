@@ -28,6 +28,13 @@ Markdown syntax.
 The template supports CiTO annotation and the template contains
 instructions on how to use them.
 
+## Submission to JCheminform.
+
+When the manuscript is finished and ready for submissions, the
+PDF and Word outputs both come in handy. The PDF can be used
+to submit the manuscript to a preprint server, while the Word
+version can be used to submit the manuscript to the journal.
+
 ## Acknowledgements
 
 This template would not exist without the work by 
