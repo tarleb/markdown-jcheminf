@@ -18,7 +18,8 @@ local function cito_properties(cite_id)
   return List(props):map(
     function (x)
       return pandoc.Strong{
-        pandoc.Space(), pandoc.Str '[cito:',
+        pandoc.Space(),
+        pandoc.Str '[cito:',
         pandoc.Str(utils.stringify(x)),
         pandoc.Str ']'
       }
@@ -27,13 +28,20 @@ local function cito_properties(cite_id)
 end
 
 local function add_cito (div)
-  if div.classes:includes 'csl-entry' and div.content[1].t == 'Para' then
-    local cite_id = div.identifier:match 'ref%-(.*)'
-    local para = div.content[1]
-    para.content:extend(cito_properties(cite_id))
-    div.content = {para}
+  local cite_id = div.identifier:match 'ref%-(.*)'
+  if cite_id and div.classes:includes 'csl-entry' then
+    return pandoc.walk_block(
+      div,
+      {
+        Span = function (span)
+          if span.classes:includes 'csl-right-inline' then
+            span.content:extend(cito_properties(cite_id))
+            return span
+          end
+        end
+      }
+    )
   end
-  return div
 end
 
 return {
