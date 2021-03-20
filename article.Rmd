@@ -1,16 +1,21 @@
 ---
-title: A sample Research article title
+title: "A sample Research article title"
 author:
-  - Jane E. Doe [1,*,orcid:0000-0002-0778-8115]
-  - John R.S. Smith [1,2,orcid:0000-0001-0002-0003]
-cito-bibliography: bibliography.bib
-link-citations: true
+- Jane E. Doe [1,*,orcid:0000-0002-0778-8115]
+- John R.S. Smith [1,2,orcid:0000-0001-0002-0003]
+link-citations: yes
 output:
   word_document:
     pandoc_args:
-      - '--lua-filter=filters/extract-cito.lua'
-      - '--citeproc'
-      - '--lua-filter=filters/insert-cito-in-ref.lua'
+    - --lua-filter=filters/extract-cito.lua
+    - --citeproc
+    - --lua-filter=filters/insert-cito-in-ref.lua
+  pdf_document:
+    pandoc_args:
+    - --lua-filter=filters/extract-cito.lua
+    - --citeproc
+    - --lua-filter=filters/insert-cito-in-ref.lua
+cito-bibliography: bibliography.bib
 ...
 
 
