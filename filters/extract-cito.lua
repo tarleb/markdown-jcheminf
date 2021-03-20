@@ -160,6 +160,9 @@ return {
   {
     Meta = function (meta)
       meta.citation_properties = properties_by_citation
+      meta.bibliography = meta.bibliography or
+        meta.cito_bibliography or
+        meta['cito-bibliography']
       return meta
     end
   }
