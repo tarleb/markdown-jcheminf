@@ -5,7 +5,7 @@ author:
 - John R.S. Smith [1,2,orcid:0000-0001-0002-0003]
 link-citations: yes
 output:
-  word_document:
+  html_document:
     pandoc_args:
     - --lua-filter=filters/extract-cito.lua
     - --citeproc
@@ -15,7 +15,13 @@ output:
     - --lua-filter=filters/extract-cito.lua
     - --citeproc
     - --lua-filter=filters/insert-cito-in-ref.lua
+  word_document:
+    pandoc_args:
+    - --lua-filter=filters/extract-cito.lua
+    - --citeproc
+    - --lua-filter=filters/insert-cito-in-ref.lua
 cito-bibliography: bibliography.bib
+csl: journal-of-cheminformatics.csl
 ...
 
 
