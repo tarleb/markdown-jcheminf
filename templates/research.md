@@ -20,6 +20,8 @@ output:
     - --lua-filter=filters/extract-cito.lua
     - --citeproc
     - --lua-filter=filters/insert-cito-in-ref.lua
+# RStudio: cito-bibliography: bibliography.bib
+# Other: bibliography: bibliography.bib
 cito-bibliography: bibliography.bib
 csl: journal-of-cheminformatics.csl
 ...
