@@ -1,5 +1,8 @@
 all: article.docx
 
+clean:
+	@rm -f article.docx article.pdf article.html *.orig .Rhistory
+
 article.pdf: article.md bibliography.bib \
 		filters/insert-cito-in-ref.lua \
 		filters/extract-cito.lua
